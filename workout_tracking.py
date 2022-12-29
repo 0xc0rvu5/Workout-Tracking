@@ -73,7 +73,7 @@ def add_exercise():
     response = requests.post(url=NUTRITIONIX_ENDPOINT, json=parameters, headers=headers)
     result = response.json()
 
-    #iterate over nutritionix json output and place it into the coorisponding sheety structure to upload to google spreadsheet then
+    #iterate over nutritionix json output and place it into the corresponding sheety structure to upload to google spreadsheet then
     #print sheety response
     for exercise in result['exercises']:
         sheety_parameters = {
